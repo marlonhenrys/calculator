@@ -18,6 +18,800 @@
 clj꞉calculator.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉calculator.core꞉> 
+6
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling if at (core.clj:4:1).
+; Too few arguments to if
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+[1 2 3]
+clj꞉calculator.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling if at (core.clj:4:1).
+; Too few arguments to if
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+[1 2 3]
+clj꞉calculator.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling if at (core.clj:4:1).
+; Too few arguments to if
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+[1 2 3]
+clj꞉calculator.core꞉> 
+[1 2 3 4]
+clj꞉calculator.core꞉> 
+[1 2 3 4]
+clj꞉calculator.core꞉> 
+; Evaluating file: core.clj
+; Syntax error compiling if at (core.clj:4:1).
+; Too few arguments to if
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+; Evaluating file: core.clj
+
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Syntax error compiling at (core.clj:6:1).
+; Unable to resolve symbol: sum in this context
+clj꞉calculator.core꞉> 
 ; Evaluating file: core.clj
 #'calculator.core/c-median
 clj꞉calculator.core꞉> 
+10
+clj꞉calculator.core꞉> 
+1/2
+clj꞉calculator.core꞉> 
+0.5
+clj꞉calculator.core꞉> 
+1
+clj꞉calculator.core꞉> 
+; Execution error (IndexOutOfBoundsException) at calculator.core/eval7947 (form-init5046006255866852130.clj:42).
+; null
+clj꞉calculator.core꞉> 
+5
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+; Running test: c-sort-test…
+; 6 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; ERROR in calculator.core-test/c-mean-test (Numbers.java:33):
+; Coleção vazia
+; error: java.lang.ArithmeticException: Divide by zero (Numbers.java:33)
+; expected:
+(= 0 (c-mean empty-coll))
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:36):
+; Coleção com um único elemento
+; expected:
+(= one-element-coll (c-mean one-element-coll))
+; actual:
+(not (= [10] 10.0))
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:39):
+; Coleção com um único elemento repetidas vezes
+; expected:
+(= repeated-element-coll (c-mean repeated-element-coll))
+; actual:
+(not (= [20 20 20 20 20 20] 20.0))
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:42):
+; Coleção já ordenada de forma crescente
+; expected:
+(= asc-coll (c-mean asc-coll))
+; actual:
+(not (= [1 2 3 4 5 6] 3.5))
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:45):
+; Coleção já ordenada de forma decrescente
+; expected:
+(= [1 2 3 4 5] (c-mean desc-coll))
+; actual:
+(not (= [1 2 3 4 5] 3.0))
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:48):
+; Coleção não ordenada
+; expected:
+(= [1 2 3 4 5 6 7] (c-mean unsorted-coll))
+; actual:
+(not (= [1 2 3 4 5 6 7] 4.0))
+; 30 tests finished, problems found. 😭 errors: 1, failures: 5, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+clear
+; Syntax error compiling at (output.calva-repl:1:7852).
+; Unable to resolve symbol: clear in this context
+clj꞉calculator.core-test꞉> 
+lein test
+#function[clojure.core/test]
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mean-test)
+
+ERROR in (c-mean-test) (Numbers.java:188)
+Coleção vazia
+expected: (= 10 (c-mean empty-coll))
+  actual: java.lang.ArithmeticException: Divide by zero
+ at clojure.lang.Numbers.divide (Numbers.java:188)
+    clojure.lang.Numbers.divide (Numbers.java:3881)
+    calculator.core$c_mean.invokeStatic (core.clj:23)
+    calculator.core$c_mean.invoke (core.clj:20)
+    calculator.core_test$fn__8406$fn__8407.invoke (core_test.clj:33)
+    calculator.core_test$fn__8406.invokeStatic (core_test.clj:32)
+    calculator.core_test/fn (core_test.clj:31)
+    clojure.test$test_var$fn__9707.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    calculator.core_test$c_mean_test.invokeStatic (core_test.clj:31)
+    calculator.core_test$c_mean_test.invoke (core_test.clj:31)
+    calculator.core_test$eval8626.invokeStatic (form-init5046006255866852130.clj:125)
+    calculator.core_test$eval8626.invoke (form-init5046006255866852130.clj:125)
+    clojure.lang.Compiler.eval (Compiler.java:7176)
+    clojure.lang.Compiler.eval (Compiler.java:7131)
+    clojure.core$eva
+l.invokeStatic (core.clj:3214)
+    clojure.core$eval.invoke (core.clj:3210)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235$fn__1236.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:665)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1973)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1973)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9068$fn__9071.invoke (main.clj:414)
+    clojure.main$repl$read_eval_print__9068.invoke (main.clj:414)
+    clojure.main$repl$fn__9077.invoke (main.clj:435)
+    clojure.main$repl.invokeStatic (main.clj:435)
+    clojure.main$repl.doInvoke (main.clj:345)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+ 
+   nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1268$fn__1272.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1337$fn__1341.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1337.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:829)
+
+FAIL in (c-mean-test) (core_test.clj:36)
+Coleção com um único elemento
+expected: [10]
+  actual: 10.0
+
+FAIL in (c-mean-test) (core_test.clj:39)
+Coleção com um único elemento repetidas vezes
+expected: [20 20 20 20 20 20]
+  actual: 20.0
+
+FAIL in (c-mean-test) (core_test.clj:42)
+Coleção já ordenada de forma crescente
+expected: [1 2 3 4 5 6]
+  actual: 3.5
+
+FAIL in (c-mean-test) (core_test.clj:45)
+Coleção já ordenada de forma decrescente
+expected: [1 2 3 4 5]
+  actual: 3.0
+
+FAIL in (c-mean-test) (core_test.clj:48)
+Coleção não ordenada
+expected: [1 2 3 4 5 6 7]
+  actual: 4.0
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+
+  
+  (c-mean-test)
+
+ERROR in (c-mean-test) (Numbers.java:188)
+Coleção vazia
+expected: (= 0 (c-mean empty-coll))
+  actual: java.lang.ArithmeticException: Divide by zero
+ at clojure.lang.Numbers.divide (Numbers.java:188)
+    clojure.lang.Numbers.divide (Numbers.java:3881)
+    calculator.core$c_mean.invokeStatic (core.clj:23)
+    calculator.core$c_mean.invoke (core.clj:20)
+    calculator.core_test$fn__8698$fn__8699.invoke (core_test.clj:33)
+    calculator.core_test$fn__8698.invokeStatic (core_test.clj:32)
+    calculator.core_test/fn (core_test.clj:31)
+    clojure.test$test_var$fn__9707.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    calculator.core_test$c_mean_test.invokeStatic (core_test.clj:31)
+    calculator.core_test$c_mean_test.invoke (core_test.clj:31)
+    calculator.core_test$eval8918.invokeStatic (form-init5046006255866852130.clj:205)
+    calculator.core_test$eval8918.invoke (form-init5046006255866852130.clj:205)
+    clojure.lang.Compiler.eval (Compiler.java:7176)
+    clojure.lang.Compiler.eval (Compiler.java:7131)
+    clojure.core$eva
+l.invokeStatic (core.clj:3214)
+    clojure.core$eval.invoke (core.clj:3210)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235$fn__1236.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:665)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1973)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1973)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9068$fn__9071.invoke (main.clj:414)
+    clojure.main$repl$read_eval_print__9068.invoke (main.clj:414)
+    clojure.main$repl$fn__9077.invoke (main.clj:435)
+    clojure.main$repl.invokeStatic (main.clj:435)
+    clojure.main$repl.doInvoke (main.clj:345)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+ 
+   nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1268$fn__1272.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1337$fn__1341.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1337.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:829)
+
+FAIL in (c-mean-test) (core_test.clj:36)
+Coleção com um único elemento
+expected: [10]
+  actual: 10.0
+
+FAIL in (c-mean-test) (core_test.clj:39)
+Coleção com um único elemento repetidas vezes
+expected: [20 20 20 20 20 20]
+  actual: 20.0
+
+FAIL in (c-mean-test) (core_test.clj:42)
+Coleção já ordenada de forma crescente
+expected: [1 2 3 4 5 6]
+  actual: 3.5
+
+FAIL in (c-mean-test) (core_test.clj:45)
+Coleção já ordenada de forma decrescente
+expected: [1 2 3 4 5]
+  actual: 3.0
+
+FAIL in (c-mean-test) (core_test.clj:48)
+Coleção não ordenada
+expected: [1 2 3 4 5 6 7]
+  actual: 4.0
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mean-test)
+
+FAIL in (c-mean-test) (core_test.clj:36)
+Coleção com um único elemento
+expected: [10]
+  actual: 10.0
+
+FAIL in (c-mean-test) (core_test.clj:39)
+Coleção com um único elemento repetidas vezes
+expected: [20 20 20 20 20 20]
+  actual: 20.0
+
+FAIL in (c-mean-test) (core_test.clj:42)
+Coleção já ordenada de forma crescente
+expected: [1 2 3 4 5 6]
+  actual: 3.5
+
+FAIL in (c-mean-test) (core_test.clj:45)
+Coleção já ordenada de forma decrescente
+expected: [1 2 3 4 5]
+  actual: 3.0
+
+FAIL in (c-mean-test) (core_test.clj:48)
+Coleção não ordenada
+expected: [1 2 3 4 5 6 7]
+  actual: 4.0
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mean-test)
+nil
+clj꞉calculator.core-test꞉> 
+(= 3 3.0)
+false
+clj꞉calculator.core-test꞉> 
+(bigdec 3.0)
+3.0M
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mean-test)
+nil
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 30 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 30 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 30 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+ERROR in (c-mode-test) (AFn.java:429)
+Coleção vazia
+expected: (= 0 (c-mode empty-coll))
+  actual: clojure.lang.ArityException: Wrong number of args (1) passed to: clojure.core/max-key
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.RestFn.invoke (RestFn.java:412)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$apply.invoke (core.clj:660)
+    calculator.core$c_mode.invokeStatic (core.clj:28)
+    calculator.core$c_mode.invoke (core.clj:25)
+    calculator.core_test$fn__9843$fn__9844.invoke (core_test.clj:50)
+    calculator.core_test$fn__9843.invokeStatic (core_test.clj:49)
+    calculator.core_test/fn (core_test.clj:48)
+    clojure.test$test_var$fn__9707.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    calculator.core_test$c_mode_test.invokeStatic (core_test.clj:48)
+    calculator.core_test$c_mode_test.invoke (core_test.clj:48)
+    calculator.core_test$eval9999.invokeStatic (form-init5046
+006255866852130.clj:341)
+    calculator.core_test$eval9999.invoke (form-init5046006255866852130.clj:341)
+    clojure.lang.Compiler.eval (Compiler.java:7176)
+    clojure.lang.Compiler.eval (Compiler.java:7131)
+    clojure.core$eval.invokeStatic (core.clj:3214)
+    clojure.core$eval.invoke (core.clj:3210)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235$fn__1236.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:665)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1973)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1973)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9068$fn__9071.invoke (main.clj:414)
+    clojure.main$repl$read_eval_print__9068.invoke (main.clj:414)
+    clojure.main$repl$fn__9077.invoke (main.clj:435)
+    cloj
+ure.main$repl.invokeStatic (main.clj:435)
+    clojure.main$repl.doInvoke (main.clj:345)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1268$fn__1272.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1337$fn__1341.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1337.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:829)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: 7
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+ERROR in (c-mode-test) (AFn.java:429)
+Coleção vazia
+expected: (= 0 (c-mode empty-coll))
+  actual: clojure.lang.ArityException: Wrong number of args (1) passed to: clojure.core/max-key
+ at clojure.lang.AFn.throwArity (AFn.java:429)
+    clojure.lang.RestFn.invoke (RestFn.java:412)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.core$apply.invokeStatic (core.clj:667)
+    clojure.core$apply.invoke (core.clj:660)
+    calculator.core$c_mode.invokeStatic (core.clj:28)
+    calculator.core$c_mode.invoke (core.clj:25)
+    calculator.core_test$fn__10110$fn__10111.invoke (core_test.clj:50)
+    calculator.core_test$fn__10110.invokeStatic (core_test.clj:49)
+    calculator.core_test/fn (core_test.clj:48)
+    clojure.test$test_var$fn__9707.invoke (test.clj:717)
+    clojure.test$test_var.invokeStatic (test.clj:717)
+    clojure.test$test_var.invoke (test.clj:708)
+    calculator.core_test$c_mode_test.invokeStatic (core_test.clj:48)
+    calculator.core_test$c_mode_test.invoke (core_test.clj:48)
+    calculator.core_test$eval10266.invokeStatic (form-init
+5046006255866852130.clj:408)
+    calculator.core_test$eval10266.invoke (form-init5046006255866852130.clj:408)
+    clojure.lang.Compiler.eval (Compiler.java:7176)
+    clojure.lang.Compiler.eval (Compiler.java:7131)
+    clojure.core$eval.invokeStatic (core.clj:3214)
+    clojure.core$eval.invoke (core.clj:3210)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235$fn__1236.invoke (interruptible_eval.clj:87)
+    clojure.lang.AFn.applyToHelper (AFn.java:152)
+    clojure.lang.AFn.applyTo (AFn.java:144)
+    clojure.core$apply.invokeStatic (core.clj:665)
+    clojure.core$with_bindings_STAR_.invokeStatic (core.clj:1973)
+    clojure.core$with_bindings_STAR_.doInvoke (core.clj:1973)
+    clojure.lang.RestFn.invoke (RestFn.java:425)
+    nrepl.middleware.interruptible_eval$evaluate$fn__1235.invoke (interruptible_eval.clj:87)
+    clojure.main$repl$read_eval_print__9068$fn__9071.invoke (main.clj:414)
+    clojure.main$repl$read_eval_print__9068.invoke (main.clj:414)
+    clojure.main$repl$fn__9077.invoke (main.clj:435)
+   
+ clojure.main$repl.invokeStatic (main.clj:435)
+    clojure.main$repl.doInvoke (main.clj:345)
+    clojure.lang.RestFn.invoke (RestFn.java:1523)
+    nrepl.middleware.interruptible_eval$evaluate.invokeStatic (interruptible_eval.clj:84)
+    nrepl.middleware.interruptible_eval$evaluate.invoke (interruptible_eval.clj:56)
+    nrepl.middleware.interruptible_eval$interruptible_eval$fn__1268$fn__1272.invoke (interruptible_eval.clj:152)
+    clojure.lang.AFn.run (AFn.java:22)
+    nrepl.middleware.session$session_exec$main_loop__1337$fn__1341.invoke (session.clj:218)
+    nrepl.middleware.session$session_exec$main_loop__1337.invoke (session.clj:217)
+    clojure.lang.AFn.run (AFn.java:22)
+    java.lang.Thread.run (Thread.java:829)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: 20
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: 20
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: 4
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: 7
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: 4
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:53)
+Coleção com um único elemento
+expected: 10
+  actual: (10)
+
+FAIL in (c-mode-test) (core_test.clj:56)
+Coleção com um único elemento repetidas vezes
+expected: 20
+  actual: (20)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: (6 3 4 2 5 1 7)
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: (3 4)
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> (c-mode-test)
+; Syntax error compiling at (output.calva-repl:573:23).
+; Unable to resolve symbol: c-mode-test in this context
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+
+FAIL in (c-mode-test) (core_test.clj:53)
+Coleção com um único elemento
+expected: 10
+  actual: (10)
+
+FAIL in (c-mode-test) (core_test.clj:56)
+Coleção com um único elemento repetidas vezes
+expected: 20
+  actual: (20)
+
+FAIL in (c-mode-test) (core_test.clj:59)
+Coleção não ordenada sem elementos repetidos
+expected: 5
+  actual: (1 2 3 4 5 6 7)
+
+FAIL in (c-mode-test) (core_test.clj:62)
+Coleção não ordenada com elementos repetidos
+expected: 3
+  actual: (3 4)
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-mode-test)
+nil
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; FAIL in calculator.core-test/c-sort-test (core_test.clj:33):
+; Coleção não ordenada com elementos repetidos
+; expected:
+[1 2 3 3 3 4 4 5]
+; actual:
+(1 2 3 3 3 4 4 4 5)
+; 28 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+; Running tests for calculator.core-test...
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; FAIL in calculator.core-test/c-range-test (core_test.clj:81):
+; Coleção não ordenada
+; expected:
+7
+; actual:
+6
+; 28 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-range-test)
+nil
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-median-test)
+
+FAIL in (c-median-test) (core_test.clj:91)
+Coleção com um único elemento repetidas vezes
+expected: 20
+  actual: 20.0
+nil
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-median-test)
+
+FAIL in (c-median-test) (core_test.clj:94)
+Coleção já ordenada de forma crescente
+expected: 3.5
+  actual: 7/2
+nil
+clj꞉calculator.core-test꞉> 
+7/2
+clj꞉calculator.core-test꞉> 
+; Execution error (ClassCastException) at calculator.core-test/eval13763 (form-init5046006255866852130.clj:102).
+; class clojure.lang.Ratio cannot be cast to class clojure.lang.Symbol (clojure.lang.Ratio and clojure.lang.Symbol are in unnamed module of loader 'app')
+clj꞉calculator.core-test꞉> 
+7/2
+clj꞉calculator.core-test꞉> 
+3.5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:40):
+; Coleção com um único elemento
+; expected:
+10.0
+; actual:
+10
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:43):
+; Coleção com um único elemento repetidas vezes
+; expected:
+20.0
+; actual:
+20
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:46):
+; Coleção não ordenada
+; expected:
+4.0
+; actual:
+4
+; FAIL in calculator.core-test/c-median-test (core_test.clj:91):
+; Coleção com um único elemento repetidas vezes
+; expected:
+20.0
+; actual:
+20
+; FAIL in calculator.core-test/c-median-test (core_test.clj:94):
+; Coleção já ordenada de forma crescente
+; expected:
+3.5
+; actual:
+7/2
+; 28 tests finished, problems found. 😭 errors: 0, failures: 5, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+(rationalize (/ 7 2))
+7/2
+clj꞉calculator.core-test꞉> 
+(with-precision (/ 7 2))
+; Execution error (IllegalArgumentException) at calculator.core-test/eval14288 (form-init5046006255866852130.clj:735).
+; No matching ctor found for class java.math.MathContext
+clj꞉calculator.core-test꞉> 
+(with-precision 2 (/ 7 2))
+7/2
+clj꞉calculator.core-test꞉> 
+(clas (/ 7 2))
+; Syntax error compiling at (output.calva-repl:742:1).
+; Unable to resolve symbol: clas in this context
+clj꞉calculator.core-test꞉> 
+(class (/ 7 2))
+clojure.lang.Ratio
+clj꞉calculator.core-test꞉> 
+(= 3.5 (/ 7 2))
+false
+clj꞉calculator.core-test꞉> 
+(= 3M 3.0M)
+true
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:40):
+; Coleção com um único elemento
+; expected:
+10.0
+; actual:
+10
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:43):
+; Coleção com um único elemento repetidas vezes
+; expected:
+20.0
+; actual:
+20
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:46):
+; Coleção não ordenada
+; expected:
+4.0
+; actual:
+4
+; 28 tests finished, problems found. 😭 errors: 0, failures: 3, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core.clj
+#'calculator.core/c-median
+clj꞉calculator.core꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+(c-median-test)
+nil
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:40):
+; Coleção com um único elemento
+; expected:
+10.0
+; actual:
+10
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:43):
+; Coleção com um único elemento repetidas vezes
+; expected:
+20.0
+; actual:
+20
+; FAIL in calculator.core-test/c-mean-test (core_test.clj:46):
+; Coleção não ordenada
+; expected:
+4.0
+; actual:
+4
+; 28 tests finished, problems found. 😭 errors: 0, failures: 3, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
+; Evaluating file: core_test.clj
+#'calculator.core-test/c-median-test
+clj꞉calculator.core-test꞉> 
+; Running all project tests…
+; 28 tests finished, all passing 👍, ns: 1, vars: 5
+clj꞉calculator.core-test꞉> 
